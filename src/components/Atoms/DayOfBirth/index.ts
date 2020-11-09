@@ -59,8 +59,6 @@ export default class DayOfBirth extends Vue {
 
     onChangeBirthDay( event): void {
         this.$emit( 'update:birthDay', event.target.value );
-
-        console.log( 'change', event.target.value )
     }
 
     onChangeBirthMonth( event ): void {
