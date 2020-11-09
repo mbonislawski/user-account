@@ -6,7 +6,6 @@ import ButtonWithIconNext       from "@/components/Molecules/ButtonWithIconNext/
 import YesOrNoQuestion          from "@/components/Atoms/YesOrNoQuestion/index.vue";
 import DayOfBirth               from "@/components/Atoms/DayOfBirth/index.vue";
 import { Watch }                from "vue-property-decorator";
-import apiUserAccount           from "@/api/User/apiUserAccount";
 import { IUserAccount }         from "@/interfaces/IUserAccount";
 import BaseStep                 from "@/components/Molecules/BaseStep/index.vue";
 import BaseForm                 from "@/components/Molecules/BaseForm/index.vue";
