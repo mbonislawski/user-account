@@ -1,10 +1,6 @@
 @import "../../../assets/styles/main";
 
 .form {
-    //@extend %display-flex;
-    //@extend %justify-content-center;
-    //@extend %width-full;
-
     @include media-medium-up() {
         margin-top: rem(30);
     }

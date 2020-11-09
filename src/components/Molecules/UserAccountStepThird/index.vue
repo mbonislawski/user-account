@@ -6,6 +6,4 @@
     </BaseStep>
 </template>
 
-<style lang="scss" src="./index.scss" scoped/>
-
 <script lang="ts" src="./index.ts"/>
