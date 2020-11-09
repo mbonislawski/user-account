@@ -14,7 +14,7 @@
         width: rem(10);
         height: rem(2);
         background-color: $gray-lighter;
-        margin: 0 rem(6);
+        margin: 0 rem(12);
 
     }
 
@@ -22,8 +22,8 @@
         margin: 0;
         padding-left: rem(14);
         background: linear-gradient(45deg, transparent 50%, $select-arrow-color 50%), linear-gradient(135deg, $select-arrow-color 50%, transparent 50%), linear-gradient(to right, transparent, transparent);
-        background-position: calc(100% - 8px) 21px, calc(100% - 5px) 21px, 100% 0;
-        background-size: rem(3) rem(3), rem(3) rem(3), rem(3) rem(3);
+        background-position: calc(100% - 8px) 20px, calc(100% - 4px) 20px, 100% 0;
+        background-size: rem(4) rem(4), rem(4) rem(4), rem(4) rem(4);
         background-repeat: no-repeat;
         -webkit-appearance:none;
         -moz-appearance:none;
@@ -60,8 +60,8 @@
     &.has-error {
         select {
             background: linear-gradient(45deg, transparent 50%, $form-field-invalid-color 50%), linear-gradient(135deg, $form-field-invalid-color 50%, transparent 50%), linear-gradient(to right, transparent, transparent);
-            background-position: calc(100% - 8px) 21px, calc(100% - 5px) 21px, 100% 0;
-            background-size: rem(3) rem(3), rem(3) rem(3), rem(3) rem(3);
+            background-position: calc(100% - 8px) 21px, calc(100% - 4px) 20px, 100% 0;
+            background-size: rem(4) rem(4), rem(4) rem(4), rem(4) rem(4);
             background-repeat: no-repeat;
             -webkit-appearance:none;
             -moz-appearance:none;

@@ -1,7 +1,7 @@
 @import "../../../assets/styles/main";
 
 .progress-item {
-    height: rem(85);
+    height: rem(88);
 
     &:before {
         @extend %position-absolute;
@@ -34,7 +34,7 @@
         padding-left: rem(8);
 
         &:first-child {
-            padding-top: rem(8);
+            padding-top: rem(12);
             padding-bottom: rem(4);
         }
     }

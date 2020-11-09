@@ -19,8 +19,8 @@
             select {
                 border-color: $form-field-invalid-color;
                 background: linear-gradient(45deg, transparent 50%, $form-field-invalid-color 50%), linear-gradient(135deg, $form-field-invalid-color 50%, transparent 50%), linear-gradient(to right, transparent, transparent);
-                background-position: calc(100% - 19px) 12px, calc(100% - 16px) 12px, 100% 0;
-                background-size: rem(3) rem(3), rem(3) rem(3), rem(3) rem(3);
+                background-position: calc(100% - 19px) 8px, calc(100% - 15px) 8px, 100% 0;
+                background-size: rem(4) rem(4), rem(4) rem(4), rem(4) rem(4);
                 background-repeat: no-repeat;
                 -webkit-appearance: none;
                 -moz-appearance: none;
@@ -154,43 +154,6 @@
     }
 
 }
-select {
-    background-color: transparent;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-
-    &.select--line {
-        width: rem(114);
-        margin-right: rem(19);
-    }
-
-    &.select--with-arrow {
-        background: linear-gradient(45deg, transparent 50%, #DADAED 50%), linear-gradient(135deg, #DADAED 50%, transparent 50%), linear-gradient(to right, transparent, transparent);
-        background-position: calc(100% - 19px) 12px, calc(100% - 16px) 12px, 100% 0;
-        background-size: rem(3) rem(3), rem(3) rem(3), rem(3) rem(3);
-        background-repeat: no-repeat;
-    }
-
-    &.select--box {
-        @extend %display-flex;
-        @extend %justify-content-end;
-        @extend %align-items-center;
-        @extend %position-relative;
-
-        width: rem(50);
-        height: rem(50);
-        outline: none;
-        border: $border-input;
-        box-sizing: border-box;
-        font-family: $font-family-main;
-        color: $gray;
-        font-style: normal;
-        font-weight: normal;
-        font-size: $font-size-md;
-        line-height: rem(28);
-        transition: all 0.2s ease;
-    }
-}
 
 .pt-xs {
     padding-top: rem(8);
@@ -230,6 +193,8 @@ input[type="text"] {
     color: $gray-darker;
     padding: 0 rem(15);
     box-sizing: border-box;
+    height: 30px;
+    padding-bottom: 8px;
 
 
     &:focus {
@@ -241,4 +206,42 @@ input[type="text"] {
     @extend %width-full;
 }
 
+select {
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 
+    &.select--line {
+        width: rem(114);
+        margin-right: rem(19);
+        padding-bottom: rem(9);
+        line-height: 1;
+    }
+
+    &.select--with-arrow {
+        background: linear-gradient(45deg, transparent 50%, $gray-lighter 50%), linear-gradient(135deg, $gray-lighter 50%, transparent 50%), linear-gradient(to right, transparent, transparent);
+        background-position: calc(100% - 19px) 8px, calc(100% - 15px) 8px, 100% 0;
+        background-size: rem(4) rem(4), rem(4) rem(4), rem(4) rem(4);
+        background-repeat: no-repeat;
+    }
+
+    &.select--box {
+        @extend %display-flex;
+        @extend %justify-content-end;
+        @extend %align-items-center;
+        @extend %position-relative;
+
+        width: rem(50);
+        height: rem(50);
+        outline: none;
+        border: $border-input;
+        box-sizing: border-box;
+        font-family: $font-family-main;
+        color: $gray;
+        font-style: normal;
+        font-weight: normal;
+        font-size: $font-size-md;
+        line-height: rem(28);
+        transition: all 0.2s ease;
+    }
+}
