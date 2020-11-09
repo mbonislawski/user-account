@@ -1,0 +1,55 @@
+@import "../../../assets/styles/main";
+
+.btn {
+    $g: &;
+
+    &__icon {
+        @include box-shadow(0 rem(23) rem(24) rgba(13, 13, 31, 0.08));
+
+        @extend %position-absolute;
+        @extend %display-flex;
+        @extend %align-items-center;
+        @extend %justify-content-center;
+
+        left: 100%;
+        height: rem(51);
+        width: rem(50);
+
+        img {
+            @extend %position-relative;
+
+            height: rem(13);
+            left: 0;
+        }
+    }
+
+    &-primary {
+        #{$g}__icon {
+            background-color: $primary-light-color;
+            transition: all 0.3s ease;
+        }
+
+        &:hover {
+            #{$g}__icon {
+                background-color: $primary-dark-color;
+
+                img {
+                    animation: animationArrow 0.9s infinite;
+                }
+
+            }
+        }
+    }
+}
+
+@keyframes animationArrow {
+    0%, 50%, 100% {
+        left: 0;
+    }
+    25% {
+        left: rem(5);
+    }
+    75% {
+        left: rem(-5);
+    }
+}

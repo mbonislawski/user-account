@@ -1,0 +1,14 @@
+@import "../../../assets/styles/main";
+
+img {
+    @extend %position-absolute;
+    @extend %width-full;
+
+    bottom: 0;
+    left: 0;
+    max-height: 100%;
+
+    @include media-medium-up() {
+        display: none;
+    }
+}

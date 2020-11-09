@@ -1,0 +1,16 @@
+@import "../../../assets/styles/main";
+@import "../../../assets/styles/common/form";
+
+.form-group {
+    &__prefix {
+        max-width: rem(256);
+        width: auto;
+    }
+
+    input {
+        @include media-medium-up() {
+            max-width: rem(237);
+        }
+    }
+}
+

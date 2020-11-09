@@ -1,0 +1,10 @@
+@import "./global/variables";
+@import "./global/placeholders";
+@import "./global/mixins";
+@import "./global/functions";
+
+.xs-center {
+    @extend %display-flex;
+    @extend %justify-content-center;
+    @extend %width-full;
+}

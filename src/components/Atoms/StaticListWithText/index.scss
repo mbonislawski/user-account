@@ -1,0 +1,28 @@
+@import "../../../assets/styles/main";
+
+ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+        @extend %position-relative;
+
+        font-size: $font-size-sm;
+        line-height: 28px;
+        list-style: none;
+        padding-left: rem(15);
+
+        &:before {
+            @extend %content-empty;
+            @extend %position-absolute;
+
+            width: rem(4);
+            height: rem(4);
+            background-color: $primary-color;
+            border-radius: 100%;
+            top: rem(12);
+            left: 0;
+        }
+
+    }
+}

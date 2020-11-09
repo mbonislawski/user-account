@@ -1,0 +1,31 @@
+@import "../../../assets/styles/main";
+
+.left {
+    @extend %display-none;
+    @extend %justify-content-center;
+    @extend %align-items-center;
+    @extend %position-relative;
+
+    background-color: $gray-darker;
+    width: rem(256);
+    height: 100%;
+
+    @include media-medium-up() {
+        display: flex;
+    }
+
+    img {
+        height: 100%;
+    }
+
+    &__content {
+        @extend %position-absolute;
+
+        width: auto;
+        left: rem(12);
+
+        img {
+            width: 100%;
+        }
+    }
+}

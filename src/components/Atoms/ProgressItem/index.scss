@@ -1,0 +1,41 @@
+@import "../../../assets/styles/main";
+
+.progress-item {
+    height: rem(85);
+
+    &:before {
+        @extend %position-absolute;
+        @extend %content-empty;
+
+        width: rem(25);
+        height: rem(2);
+        background-color: $color-white;
+        mix-blend-mode: normal;
+        opacity: 0.25;
+    }
+
+    &.active {
+        &:before {
+            background-color: $secondary;
+            opacity: 1;
+        }
+    }
+
+    span {
+        @extend %display-block;
+
+        font-family: $font-family-main;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(11);
+        line-height: rem(11);
+        letter-spacing: rem(0.22);
+        color: $color-white;
+        padding-left: rem(8);
+
+        &:first-child {
+            padding-top: rem(8);
+            padding-bottom: rem(4);
+        }
+    }
+}

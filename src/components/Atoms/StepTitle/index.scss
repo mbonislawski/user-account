@@ -1,0 +1,21 @@
+@import "../../../assets/styles/main";
+
+h4 {
+    font-family: $font-family-main;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-size-sm;
+    line-height: rem(24);
+    letter-spacing: rem(0.27);
+    color: $gray-darker;
+    max-width: rem(264);
+    margin: 0;
+
+    @include media-medium-up() {
+        max-width: rem(322);
+    }
+
+    &.mb-30 {
+        margin-bottom: rem(30);
+    }
+}

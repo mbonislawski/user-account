@@ -1,0 +1,23 @@
+@import "../../assets/styles/main";
+
+.content {
+    font-family: $font-family-main;
+    padding-top: rem(25);
+    padding-bottom: rem(47);
+    background-color: $gray-dark;
+    min-height: 100vh;
+    height: 100%;
+
+    @include media-medium-up() {
+        padding-top: rem(56);
+        padding-bottom: rem(90);
+    }
+
+    @include media-medium-height-up() {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

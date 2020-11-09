@@ -1,0 +1,74 @@
+@import "../global/placeholders";
+@import "../global/variables";
+
+.is-loading {
+    &:not(.has-loaded) {
+        @extend %position-relative;
+
+        > * {
+            filter: grayscale(100%) blur(2px);
+        }
+
+        * {
+            pointer-events: none;
+        }
+
+        &:not(:required) {
+            &:after {
+                @include animation(spinner 1500ms infinite linear);
+                @include box-shadow($primary-color 1.5em 0 0 0, $primary-color 1.1em 1.1em 0 0, $primary-color 0 1.5em 0 0, $primary-color -1.1em 1.1em 0 0, $primary-color -1.5em 0 0 0, $primary-color -1.1em -1.1em 0 0, $primary-color 0 -1.5em 0 0, $primary-color 1.1em -1.1em 0 0);
+
+                @extend %position-absolute;
+                @extend %display-block;
+                @extend %content-empty;
+
+                border-radius: 100%;
+                filter: none;
+                font-size: rem(15);
+                left: 50%;
+                top: 50%;
+                width: rem(8);
+                height: rem(8);
+                z-index: 10;
+            }
+        }
+    }
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    100% {
+        @include transform(rotate(360deg));
+    }
+}
+
+@-moz-keyframes spinner {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    100% {
+        @include transform(rotate(360deg));
+    }
+}
+
+@-o-keyframes spinner {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    100% {
+        @include transform(rotate(360deg));
+    }
+}
+
+@keyframes spinner {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    100% {
+        @include transform(rotate(360deg));
+    }
+}

@@ -1,0 +1,49 @@
+@mixin media-smaller-up() {
+    @media (min-width: $upto-xs) {
+        @content;
+    }
+}
+
+@mixin media-small-up() {
+    @media (min-width: $upto-sm) {
+        @content;
+    }
+}
+
+@mixin media-medium-up() {
+    @media (min-width: $upto-md) {
+        @content;
+    }
+}
+
+@mixin media-large-up() {
+    @media (min-width: $upto-lg) {
+        @content;
+    }
+}
+
+@mixin media-medium-height-up() {
+    @media (min-height: $upto-md-height) {
+        @content;
+    }
+}
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin animation($animation...) {
+    -moz-animation: $animation;
+    -ms-animation: $animation;
+    -o-animation: $animation;
+    -webkit-animation: $animation;
+    animation: $animation;
+}
+@mixin transform($transform...) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}

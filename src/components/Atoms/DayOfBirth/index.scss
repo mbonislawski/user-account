@@ -1,0 +1,70 @@
+@import "../../../assets/styles/main";
+@import "../../../assets/styles/common/form";
+
+.form-group {
+    &__birth-date {
+        .form-group__radio {
+            margin-right: 0;
+        }
+    }
+
+    .form-group__separator {
+        @extend %display-inline-block;
+
+        width: rem(10);
+        height: rem(2);
+        background-color: $gray-lighter;
+        margin: 0 rem(6);
+
+    }
+
+    select {
+        margin: 0;
+        padding-left: rem(14);
+        background: linear-gradient(45deg, transparent 50%, $select-arrow-color 50%), linear-gradient(135deg, $select-arrow-color 50%, transparent 50%), linear-gradient(to right, transparent, transparent);
+        background-position: calc(100% - 8px) 21px, calc(100% - 5px) 21px, 100% 0;
+        background-size: rem(3) rem(3), rem(3) rem(3), rem(3) rem(3);
+        background-repeat: no-repeat;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+
+        &.is-mobile {
+            @include media-medium-up() {
+                display: none;
+            }
+        }
+
+        &.is-desktop {
+            @extend %display-none;
+
+            @include media-medium-up() {
+                display: block;
+            }
+        }
+
+        &.select-year {
+            width: rem(114);
+
+            @include media-medium-up() {
+                width: rem(144);
+            }
+        }
+
+        &.select-month {
+            @include media-medium-up() {
+                width: rem(134);
+            }
+        }
+    }
+
+    &.has-error {
+        select {
+            background: linear-gradient(45deg, transparent 50%, $form-field-invalid-color 50%), linear-gradient(135deg, $form-field-invalid-color 50%, transparent 50%), linear-gradient(to right, transparent, transparent);
+            background-position: calc(100% - 8px) 21px, calc(100% - 5px) 21px, 100% 0;
+            background-size: rem(3) rem(3), rem(3) rem(3), rem(3) rem(3);
+            background-repeat: no-repeat;
+            -webkit-appearance:none;
+            -moz-appearance:none;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import "../../../assets/styles/main";
+
+.step {
+    @extend %width-full;
+    //@extend %display-flex;
+    //@extend %justify-content-center;
+
+    &__content {
+        //@extend %display-flex;
+        //@extend %flex-direction-column;
+        //@extend %width-full;
+        //@extend %align-items-baseline;
+    }
+}

@@ -1,0 +1,22 @@
+@import "../../../assets/styles/main";
+
+h1 {
+    @extend %position-relative;
+    @extend %display-flex;
+    @extend %justify-content-center;
+    @extend %width-full;
+
+    color: $color-white;
+    font-family: $font-family-main;
+    font-style: normal;
+    font-weight: $font-weight-light;
+    font-size: rem(36.0347);
+    line-height: rem(42);
+    padding: 0;
+    margin: 0;
+
+    @include media-medium-up() {
+        font-size: rem(48.0463);
+        line-height: rem(48);
+    }
+}

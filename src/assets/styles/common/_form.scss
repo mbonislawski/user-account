@@ -1,0 +1,244 @@
+@import "../global/variables";
+@import "../global/placeholders";
+@import "../global/functions";
+
+.form {
+    &-group {
+        @extend %display-inline-block;
+        @extend %width-full;
+        @extend %position-relative;
+
+        font-family: $font-family-main;
+
+        &.has-error {
+            input {
+                border-color: $form-field-invalid-color;
+                color: $form-field-invalid-color;
+            }
+
+            select {
+                border-color: $form-field-invalid-color;
+                background: linear-gradient(45deg, transparent 50%, $form-field-invalid-color 50%), linear-gradient(135deg, $form-field-invalid-color 50%, transparent 50%), linear-gradient(to right, transparent, transparent);
+                background-position: calc(100% - 19px) 12px, calc(100% - 16px) 12px, 100% 0;
+                background-size: rem(3) rem(3), rem(3) rem(3), rem(3) rem(3);
+                background-repeat: no-repeat;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+            }
+
+
+            &:not(.is-checked) {
+                .form-group__radio--box {
+                    border-color: $form-field-invalid-color;
+
+                    .label__box {
+                        border-color: $form-field-invalid-color;
+                    }
+                }
+            }
+        }
+
+        &__error {
+            @extend %position-absolute;
+
+            font-family: $font-family-main;
+            color: $form-field-invalid-color;
+            font-style: normal;
+            font-weight: normal;
+            font-size: rem(10.9564);
+            line-height: rem(11);
+            padding-left: rem(15);
+            margin-top: rem(4);
+        }
+
+        &__inline {
+            @extend %display-flex;
+            @extend %align-items-center;
+
+            select {
+                margin-right: rem(19);
+            }
+        }
+
+        &__radio {
+            &:first-child {
+                margin-right: rem(25);
+            }
+        }
+
+        &__radio {
+            @extend %cursor-pointer;
+
+            &--box {
+                @extend %display-flex;
+                @extend %justify-content-end;
+                @extend %align-items-center;
+                @extend %position-relative;
+
+                width: rem(50);
+                height: rem(50);
+                background-color: rgba(255, 255, 255, 0.0001);
+                border: $border-input;
+                box-sizing: border-box;
+                font-family: $font-family-main;
+                font-style: normal;
+                font-weight: normal;
+                font-size: $font-size-md;
+                line-height: rem(28);
+                transition: all 0.2s ease;
+                color: $gray;
+            }
+
+            .label__value {
+                @extend %display-block;
+
+                padding-left: rem(7);
+            }
+
+            .label__box {
+                @extend %display-flex;
+                @extend %justify-content-center;
+                @extend %align-items-center;
+                @extend %position-absolute;
+
+                width: rem(15);
+                height: rem(15);
+                background: linear-gradient(5.88deg, rgba(165, 165, 180, 0.15) 4.19%, rgba(228, 235, 239, 0.15) 95.81%, rgba(231, 232, 238, 0.15) 95.81%, rgba(231, 232, 238, 0.15) 95.81%), #FCFCFD;
+                border: $border-input;
+                box-sizing: border-box;
+                font-size: $font-size-md;
+                right: rem(-8);
+
+                .box__dot {
+                    width: rem(3);
+                    height: rem(3);
+                    background-color: transparent;
+                    box-sizing: border-box;
+                    font-size: $font-size-md;
+                }
+            }
+
+            &.is-checked {
+                border-color: $secondary;
+
+                .label__box {
+                    border-color: $secondary
+                }
+
+                .box__dot {
+                    background-color: $secondary;
+                }
+            }
+        }
+    }
+
+    &-label {
+        @extend %display-block;
+
+        font-family: $font-family-main;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(11);
+        line-height: rem(28);
+        color: $gray;
+        padding-left: rem(15);
+        margin-top: rem(30);
+
+        @include media-medium-up() {
+            margin-top: rem(21);
+        }
+    }
+
+    &-inline {
+        @extend %display-flex;
+    }
+
+}
+select {
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &.select--line {
+        width: rem(114);
+        margin-right: rem(19);
+    }
+
+    &.select--with-arrow {
+        background: linear-gradient(45deg, transparent 50%, #DADAED 50%), linear-gradient(135deg, #DADAED 50%, transparent 50%), linear-gradient(to right, transparent, transparent);
+        background-position: calc(100% - 19px) 12px, calc(100% - 16px) 12px, 100% 0;
+        background-size: rem(3) rem(3), rem(3) rem(3), rem(3) rem(3);
+        background-repeat: no-repeat;
+    }
+
+    &.select--box {
+        @extend %display-flex;
+        @extend %justify-content-end;
+        @extend %align-items-center;
+        @extend %position-relative;
+
+        width: rem(50);
+        height: rem(50);
+        outline: none;
+        border: $border-input;
+        box-sizing: border-box;
+        font-family: $font-family-main;
+        color: $gray;
+        font-style: normal;
+        font-weight: normal;
+        font-size: $font-size-md;
+        line-height: rem(28);
+        transition: all 0.2s ease;
+    }
+}
+
+.pt-xs {
+    padding-top: rem(8);
+
+    @include media-medium-up() {
+        padding-top: 0;
+    }
+}
+
+
+input {
+    &[type="radio"] {
+        display: none;
+        position: absolute;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+select.select--line,
+input[type="number"],
+input[type="text"] {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: $border-input;
+    font-family: $font-family-main;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-size-md;
+    line-height: rem(27);
+    letter-spacing: rem(0.318787);
+    color: $gray-darker;
+    padding: 0 rem(15);
+    box-sizing: border-box;
+
+
+    &:focus {
+        border-color: $border-input-active-color;
+    }
+}
+
+.input-lg {
+    @extend %width-full;
+}
+
+

@@ -1,0 +1,13 @@
+@import "../../../assets/styles/main";
+
+.progress-bar {
+    @extend %position-absolute;
+    @extend %display-none;
+
+    left: 100%;
+    top: rem(109);
+
+    @include media-medium-up() {
+        display: block;
+    }
+}

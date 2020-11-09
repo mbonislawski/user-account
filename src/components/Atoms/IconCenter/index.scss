@@ -1,0 +1,14 @@
+@import "../../../assets/styles/main";
+
+div {
+    @extend %position-relative;
+    @extend %display-flex;
+    @extend %justify-content-center;
+    @extend %width-full;
+
+    margin-top: 20px;
+
+    img {
+        max-width: rem(80);
+    }
+}

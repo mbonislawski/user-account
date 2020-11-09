@@ -1,0 +1,41 @@
+//colors
+$color-light:                   #f7eded;
+$color-white:                   #fff;
+$gray-light:                    #C1C1C3;
+$gray-lighter:                  #DADAED;
+$gray-dark:                     #242424;
+$gray-darker:                   #202020;
+$gray:                          #333;
+
+$primary-color:                 #652AE6;
+$primary-lighter-color:         #8658EB;
+$primary-light-color:           #7841F4;
+$primary-dark-color:            #521cca;
+$secondary:                     #1BFEC0;
+$danger:                        #EB5757;
+
+// breakpoints
+$upto-xs:                       360px;
+$upto-sm:                       768px;
+$upto-md:                       992px;
+$upto-lg:                       1366px;
+
+$upto-md-height:                800px;
+
+// fonts
+$font-size-xs:                  12px;
+$font-size-sm:                  14px;
+$font-size-md:                  16px;
+
+$font-weight-light:             300;
+$font-weight-normal:            500;
+$font-weight-bold:              700;
+
+$font-family-main:              'Roboto', sans-serif;
+
+$border:                        1px solid #ccc;
+$border-input:                  2px solid $gray-lighter;
+$border-input-active-color:     $primary-color;
+$select-arrow-color:            $gray-light;
+
+$form-field-invalid-color:      $danger;
