@@ -60,7 +60,7 @@
     &.has-error {
         select {
             background: linear-gradient(45deg, transparent 50%, $form-field-invalid-color 50%), linear-gradient(135deg, $form-field-invalid-color 50%, transparent 50%), linear-gradient(to right, transparent, transparent);
-            background-position: calc(100% - 8px) 21px, calc(100% - 4px) 20px, 100% 0;
+            background-position: calc(100% - 8px) 20px, calc(100% - 4px) 20px, 100% 0;
             background-size: rem(4) rem(4), rem(4) rem(4), rem(4) rem(4);
             background-repeat: no-repeat;
             -webkit-appearance:none;
