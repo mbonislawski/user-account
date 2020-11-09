@@ -4,7 +4,8 @@ import BaseButton           from "@/components/Atoms/BaseButton/index.vue";
 @Options( {
     props: {
         text: String,
-        variant: String
+        variant: String,
+        type: String
     },
     components: {
         BaseButton

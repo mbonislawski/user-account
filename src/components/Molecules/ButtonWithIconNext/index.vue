@@ -3,7 +3,7 @@
         <span>{{ text }}</span>
 
         <span class="btn__icon">
-            <img :src="arrowIconUrl" :alt="text">
+            <img :src="arrowIconUrl" alt="arrow icon">
         </span>
     </BaseButton>
 </template>
