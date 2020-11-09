@@ -17,9 +17,9 @@ export default class DayOfBirth extends Vue {
     birthDay = '';
     birthMonth = '';
     birthYear = '';
-    days: any;
-    months: any;
-    years: any;
+    days: { value: string }[] = [];
+    months: { text: string; value: string | null }[] = [];
+    years: { value: string }[] = [];
 
     created() {
         this.generateDays( 31 );
