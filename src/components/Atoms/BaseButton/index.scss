@@ -21,7 +21,7 @@
     width: rem(170);
     outline: none;
     bottom: rem(-25.5);
-    padding-top: rem(19.5);
+    padding-top: rem(20);
     padding-bottom: rem(19.5);
     margin-right: rem(50);
 
@@ -31,6 +31,7 @@
         left: auto;
         width: rem(186);
         margin-right: 0;
+        font-size: $font-size-xs;
     }
 
     &-primary {
